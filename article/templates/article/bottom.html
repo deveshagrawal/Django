@@ -1,0 +1,14 @@
+{% extends 'article/base.html' %}
+
+{% block bottom %}
+                <div class="read-next">
+                    <hr>
+                    <h1>What to Read Next</h1>
+                    <hr>
+                    {% for article in articles %}
+                    <p class="col-md-2">
+                        <a href="{% url 'article.views.article_detail' pk=article.pk %}"><img src={{ article.hero_image}}>{{ article.title }}</a>
+                    </p>
+                    {% endfor %}
+                </div>
+{% endblock bottom %}

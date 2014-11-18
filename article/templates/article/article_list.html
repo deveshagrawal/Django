@@ -1,0 +1,10 @@
+{% extends 'article/bottom.html' %}
+
+{% block content %}
+    {% for article in articles %}
+        <div class="article">
+            <h1><a href="{% url 'article.views.article_detail' pk=article.pk %}">{{ article.title }}</a></h1>
+            <p>{{ article.bodytext|linebreaks }}</p>
+        </div>
+    {% endfor %}
+{% endblock content %}

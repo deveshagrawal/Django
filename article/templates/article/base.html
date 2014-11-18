@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{% static 'css/article.css' %}">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <title>DemoSite Article</title>
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/">Demo Articles</a></h1>
+        </div>
+        <div class="search-bar">
+            <form>
+                <input type="text" placeholder="Search..." required></input>
+            </form>
+        </div>
+        <div class="navbar">
+                <div class="navbar-inner">
+                    <ul class="nav">
+                        <li><a href="#">Nav1</a></li>
+                        <li><a href="#">Nav2</a></li>
+                        <li><a href="#">Nav3</a></li>
+                        <li><a href="#">Nav4</a></li>
+                        <li><a href="#">Nav5</a></li>
+                    </ul>
+                </div>
+            </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock content%}
+                </div>
+            </div>
+        </div>
+                    {% block bottom %}
+                    {% endblock bottom %}
+    </body>
+</html>

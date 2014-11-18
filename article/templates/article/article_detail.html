@@ -1,0 +1,12 @@
+{% extends 'article/bottom.html' %}
+
+{% block content%}
+    <h1>{{ article.title }}</h1>
+    <div class="date">
+        {% if article.publication_date %}
+            {{ article.publication_date }}
+        {% endif %}
+    </div>
+    <h4>{{ article.category }}</h4>
+    <p>{{ article.bodytext|linebreaks }}</p>
+{% endblock content%}
